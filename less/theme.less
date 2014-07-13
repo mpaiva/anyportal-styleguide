@@ -1,0 +1,232 @@
+/*!
+ * Your Theme Name v0.1.0
+ *
+ * Copyright 2013 Your Name
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * This theme was built using the Themestrap Bootstrap Theme Kit.
+ * https://github.com/divshot/themestrap
+ */
+
+
+// --------------------------------------------------
+// Barclays Digital Guidelines Colors
+// --------------------------------------------------
+
+//-- Primary Brand
+@barcap-cyan:           #00aeef;
+@barcap-cyan-75:        fade(@barcap-cyan, 75%);
+@barcap-cyan-50:        fade(@barcap-cyan, 50%);
+@barcap-cyan-25:        fade(@barcap-cyan, 25%);
+@barcap-cyan-10:        fade(@barcap-cyan, 10%);
+
+//-- Secondary Brand - Blue
+@barcap-blue:           #00395d;
+@barcap-blue-75:        fade(@barcap-blue, 75%);
+@barcap-blue-50:        fade(@barcap-blue, 50%);
+@barcap-blue-25:        fade(@barcap-blue, 25%);
+@barcap-blue-10:        fade(@barcap-blue, 10%);
+@barcap-blue-8:        fade(@barcap-blue, 8%);
+@barcap-blue-5:        fade(@barcap-blue, 5%);
+
+//-- Secondary Brand - Dark Grey
+@barcap-darkgrey:           #666;
+@barcap-darkgrey-75:        fade(@barcap-darkgrey, 75%);
+@barcap-darkgrey-50:        fade(@barcap-darkgrey, 50%);
+@barcap-darkgrey-25:        fade(@barcap-darkgrey, 25%);
+@barcap-darkgrey-10:        fade(@barcap-darkgrey, 10%);
+
+//-- Secondary Brand - Black
+@barcap-black:           #000;
+
+//-- Primary Web
+@barcap-web-cyan-dark:  #006991;
+@barcap-web-cyan:       #007eb6;
+@barcap-web-cyan-light: #6dcff6;
+
+//-- Secondary Web
+@barcap-web-blue:       #003366;
+@barcap-web-blue-50:    #7f99b2;
+
+//-- Tertiary 
+@barcap-orange:         #dc630a;
+@barcap-red:            #c33;
+@barcap-green:          #72a309;
+
+//-- Tertiary Graphs Only
+@barcap-purple:         #820053;
+@barcap-yellow:         #ffcf01;
+
+// --------------------------------------------------
+
+
+@import "bootstrap.less";
+
+
+// Mixins
+
+.drop-shadow (@x: 0, @y: 2px, @blur: 4px, @spread: 0, @alpha: 0.15) {
+	-webkit-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+	-moz-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+	box-shadow:		@x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+
+.ut-color-name (@ut-color-name, @ut-color) {
+    .ut-@{ut-color-name} .ut-color-swatch {
+        background: @ut-color;
+    }
+}
+
+
+// Add CSS Customizations to your theme here.
+
+
+
+
+
+@font-face {
+    font-family: "Expert-Sans-Light";
+    src: url("fonts/expertsans-light-webfont.eot");
+    src: url("fonts/expertsans-light-webfont.eot?#iefix") format("embedded-opentype"),url("fonts/expertsans-light-webfont.svg#expertsans-light-webfont") format("svg"),url("fonts/expertsans-light-webfont.woff") format("woff"),url("fonts/expertsans-light-webfont.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family:"Expert-Sans-Regular";src:url("fonts/expertsans-regular-webfont.eot");src:url("fonts/expertsans-regular-webfont.eot?#iefix") format("embedded-opentype"),url("fonts/expertsans-regular-webfont.svg#expertsans-regular-webfont") format("svg"),url("fonts/expertsans-regular-webfont.woff") format("woff"),url("fonts/expertsans-regular-webfont.ttf") format("truetype");font-style:normal;font-weight:normal;
+}
+
+@font-face {
+    font-family:"Expert-Sans-Bold";src:url("fonts/expertsans-bold-webfont.eot");src:url("fonts/expertsans-bold-webfont.eot?#iefix") format("embedded-opentype"),url("fonts/expertsans-bold-webfont.svg#expertsans-bold-webfont") format("svg"),url("fonts/expertsans-bold-webfont.woff") format("woff"),url("fonts/expertsans-bold-webfont.ttf") format("truetype");font-style:normal;font-weight:normal;
+}
+
+@font-face {
+    font-family:"Expert-Sans-ExtraBold";src:url("fonts/expertsans-extrabold-webfont.eot");src:url("fonts/expertsans-extrabold-webfont.eot?#iefix") format("embedded-opentype"),url("fonts/expertsans-extrabold-webfont.svg#expertsans-extrabold-webfont") format("svg"),url("fonts/expertsans-extrabold-webfont.woff") format("woff"),url("fonts/expertsans-extrabold-webfont.ttf") format("truetype");font-style:normal;font-weight:normal;
+}
+
+@font-face {
+    font-family:"Icons";src:url("fonts/icomoon.eot");src:url("fonts/icomoon.eot?#iefix") format("embedded-opentype"),url("fonts/icomoon.svg#icomoon") format("svg"),url("fonts/icomoon.woff") format("woff"),url("fonts/icomoon.ttf") format("truetype");font-style:normal;font-weight:normal;
+}
+
+
+
+body   { margin-top: 70px;}
+
+.ut-dropshadow {
+    .drop-shadow();
+}
+
+
+h1,h2,h3,h4,h5,h6, .lead {
+    font-family:"Expert-Sans-Light","Helvetica",Helvetica,Arial,sans-serif;
+    font-weight:normal;
+    font-style:normal;
+    color:#007eb6;
+    text-rendering:optimizeLegibility;
+    margin-top:0;
+    margin-bottom:.4em;
+    line-height:1.0125em;
+}
+
+
+/* Barclays Swatch Colors
+---------------------------------------------------------------------------- */
+
+//-- Primary Brand
+.ut-color-name (barcap-cyan, @barcap-cyan);
+.ut-color-name (barcap-cyan-75, @barcap-cyan-75);
+.ut-color-name (barcap-cyan-50, @barcap-cyan-50);
+.ut-color-name (barcap-cyan-25, @barcap-cyan-25);
+.ut-color-name (barcap-cyan-10, @barcap-cyan-10);
+
+//-- Secondary Brand - Blue
+.ut-color-name (barcap-blue, @barcap-blue);
+.ut-color-name (barcap-blue-75, @barcap-blue-75);
+.ut-color-name (barcap-blue-50, @barcap-blue-50);
+.ut-color-name (barcap-blue-25, @barcap-blue-25);
+.ut-color-name (barcap-blue-10, @barcap-blue-10);
+.ut-color-name (barcap-blue-8, @barcap-blue-8);
+.ut-color-name (barcap-blue-5, @barcap-blue-5);
+
+//-- Secondary Brand - Dark Grey
+.ut-color-name (barcap-darkgrey, @barcap-darkgrey);
+.ut-color-name (barcap-darkgrey-75, @barcap-darkgrey-75);
+.ut-color-name (barcap-darkgrey-50, @barcap-darkgrey-50);
+.ut-color-name (barcap-darkgrey-25, @barcap-darkgrey-25);
+.ut-color-name (barcap-darkgrey-10, @barcap-darkgrey-10);
+
+//-- Secondary Brand - Black
+.ut-color-name (barcap-black, @barcap-black);
+
+//-- Primary Web
+.ut-color-name (barcap-web-cyan-dark, @barcap-web-cyan-dark);
+.ut-color-name (barcap-web-cyan, @barcap-web-cyan);
+.ut-color-name (barcap-web-cyan-light, @barcap-web-cyan-light);
+
+//-- Secondary Web
+.ut-color-name (barcap-web-blue, @barcap-web-blue);
+.ut-color-name (barcap-web-blue-50, @barcap-web-blue-50);
+
+//-- Tertiary
+.ut-color-name (barcap-orange, @barcap-orange);
+.ut-color-name (barcap-red, @barcap-red);
+.ut-color-name (barcap-green, @barcap-green);
+
+//-- Tertiary Graphs Only
+.ut-color-name (barcap-purple, @barcap-purple);
+.ut-color-name (barcap-yellow, @barcap-yellow);
+
+.ut-color {
+  background: #fff;
+  border: 1px solid #b3b3b3;
+  display: inline-block;
+  height: 80px;
+  margin: 0 .5em .5em 0;
+  padding: 5px;
+  position: relative;
+  width: 100px;
+}
+.ut-lg {
+  width: 140px;
+  height: 100px;
+}
+.ut-color-swatch {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.ut-color-swatch span {
+  background: #000;
+  background: rgba(0, 0, 0, 0.7);
+  bottom: 5px;
+  color: #fff;
+  font-size: .8em;
+  margin: 0;
+  opacity: 0;
+  padding: 5px 0;
+  position: absolute;
+  font-family: Arial;
+  font-size: 8pt;   
+  text-align: center;
+  text-transform: uppercase;
+  width: 88px;
+}
+.ut-lg .ut-color-swatch span {
+  width: 128px;
+}
+.ut-color-swatch:hover span {
+  opacity: 1;
+}
+.ut-animated {
+  -webkit-transition: all 0.6s ease-out;
+  -moz-transition: all 0.6s ease-out;
+  -ms-transition: all 0.6s ease-out;
+  -o-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
+}
+
+
+
+
+
